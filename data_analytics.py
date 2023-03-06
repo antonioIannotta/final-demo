@@ -72,7 +72,12 @@ print("PCA result")
 print(X_t.shape)
 
 
-X_nd = [X_t[3,:]]
+print("Here's the new films catalog")
+print(new_dataframe.title)
+
+film = int(input(("Insert a number between 1 and 30\n")))
+
+X_nd = [X_t[film,:]]
 
 knn_regression = pk.load(open('nd_supervised_models/knn_regression.pkl', "rb"))
 knn_predicted = knn_regression.predict(X_nd)
