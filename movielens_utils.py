@@ -42,11 +42,12 @@ def tag_relevance_movies_creation(tag_name_dataframe, tag_relevance_dataframe):
     return tag_relevance_movies
 
 def return_new_dataframe():
-    movie_dataframe = pd.read_csv('../csv_files/movies.csv')
+    path = "csv_files/movies.csv"
+    movie_dataframe = pd.read_csv(path)
     movie_splitted_genre = movie_with_splitted_genre(movie_dataframe)[0]
 
-    tag_name_dataframe = pd.read_csv('../csv_files/genome-tags.csv')
-    tag_relevance_dataframe = pd.read_csv('../csv_files/genome-scores.csv')
+    tag_name_dataframe = pd.read_csv('csv_files/genome-tags.csv')
+    tag_relevance_dataframe = pd.read_csv('csv_files/genome-scores.csv')
 
     tag_relevance_movies = tag_relevance_movies_creation(tag_name_dataframe, tag_relevance_dataframe)
 

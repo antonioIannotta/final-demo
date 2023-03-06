@@ -1,9 +1,7 @@
-import numpy as np
 import pandas as pd
-import sys
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
-from utils import movielens_utils
+import movielens_utils
 import pickle as pk
 import torch
 from utils.architecture import MLP, MLP_DropOut
